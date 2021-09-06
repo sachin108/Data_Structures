@@ -6,10 +6,9 @@ int main(){
 	int l_ptr=0;
 	for(int i=0;i<sizeof_array;++i){
 		if(array[i]!=0){
-			//swapping
-			array[i]=array[i]^array[l_ptr];
-			array[l_ptr]=array[i]^array[l_ptr];
-			array[i]=array[i]^array[l_ptr];
+			int temp=array[i];
+			array[i]=array[l_ptr];
+			array[l_ptr]=temp;
 			++l_ptr;
 		}
 	}
