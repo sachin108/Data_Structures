@@ -1,3 +1,4 @@
+//it will change data of list
 import java.util.*;
 public class Detect_Cycle{
 	static Node head,tail;
