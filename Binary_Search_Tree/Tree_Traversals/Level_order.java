@@ -1,5 +1,5 @@
 import java.util.*;
-public class Insertion{
+public class Level_order{
 	static Node root;
 	static void insert(int value){
 		insertNode(root,value);
