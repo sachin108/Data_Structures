@@ -1,5 +1,5 @@
 import java.util.*;
-public class insert_between{
+public class Delete_from_position{
 	static Node head,tail;
 	static void addNode(int data){
 		Node newNode=new Node(data);
@@ -12,16 +12,18 @@ public class insert_between{
 		}
 		tail.next=null;
 	}
-
-    static void insertAt(int position, int value){
-        Node temp=head;
-        for(int i=1;i<position;i++){
-            temp=temp.next;
+    
+    static void delete(int position){
+        if(position==1){
+            head=head.next;
+            return;
         }
-        Node x=temp.next;
-        Node node=new Node(108);
-        temp.next=node;
-        node.next=x;
+        Node temp=head;
+        while(position>1){
+            temp=temp.next;
+            --position;
+        }
+        temp.next=temp.next.next;
     }
 
 	static void traverse(Node head){
@@ -37,10 +39,10 @@ public class insert_between{
 		for(int i=1;i<10;i++){
 			addNode(i);
 		}
-		System.out.println("before inserting between");
+		System.out.println("before deleting a node");
 		traverse(head);
-		System.out.println("after inserting a node at specific position");
-		insertAt(3, 108);
+		System.out.println("after deleting a node");
+        delete(3);
         traverse(head);
 	}
 }
