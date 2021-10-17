@@ -15,8 +15,13 @@ int main(){
     // at top before reversing - Javascript
 
     reverse();
-    // after reversing stack at top- C/C++
-    cout<<st.top();
+    // after reversing stack at top
+    string stack="";
+    while(!(st.empty())){
+        stack+=st.top()+"   ";
+        st.pop();
+    }
+    cout<<stack;
     return 0;
 }
 
