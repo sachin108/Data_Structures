@@ -35,6 +35,8 @@ public class Level_order{
 		root=new Node(22);
 		insert(20);insert(25);insert(23);
 		insert(24);insert(19);insert(21);
+		insert(12);insert(34);insert(15);
+		insert(42);insert(16);insert(56);
 		level_order(root);
 	}
 }

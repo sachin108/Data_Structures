@@ -1,6 +1,7 @@
 import java.util.*;
-public class height_of_tree{
+public class Number_of_nodes{
 	static Node root;
+    static int no_of_nodes;
 	static void insert(int value){
 		insertNode(root,value);
 	}
@@ -17,17 +18,17 @@ public class height_of_tree{
 		}
 		return root;
 	}
-	static int height(Node root){
-		if(root==null)
-            return 0;
-        return 1+Math.max(height(root.left), height(root.right));
-	}
+	
+    static int count_nodes(Node root){
+
+    }
 	
 	public static void main(String[] args){
-		root=new Node(10);
-		insert(11);insert(56);insert(44);insert(12);insert(45);insert(32);insert(41);insert(23);
-		insert(9);insert(51);insert(35);insert(21);insert(78);insert(81);insert(75);insert(33);
-        System.out.print("height of tree = "+height(root));
+		root=new Node(22);
+		insert(20);insert(25);insert(23);
+		insert(24);insert(19);insert(21);
+		count_nodes(root);
+        System.out.print(no_of_nodes);
 	}
 }
 class Node{
