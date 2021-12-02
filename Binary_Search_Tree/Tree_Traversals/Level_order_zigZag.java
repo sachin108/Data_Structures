@@ -1,5 +1,5 @@
 import java.util.*;
-public class Level_Order_zigZag{
+public class Level_order_zigZag{
 	static Node root;
 	static void insert(int value){
 		insertNode(root,value);

@@ -1,4 +1,4 @@
-import java.util.*;
+
 public class Inorder{
 	static Node root;
 	static void insert(int value){
