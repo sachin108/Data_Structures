@@ -1,6 +1,6 @@
 public class Binary_tree{
-	Node root;
-	public void Inorder(Node root){
+	TreeNode root;
+	public void Inorder(TreeNode root){
 		if(root!=null){
 			Inorder(root.left);
 			System.out.print(root.key+"-->");
@@ -8,7 +8,7 @@ public class Binary_tree{
 		}
 	}
 	
-	public void Preorder(Node root){
+	public void Preorder(TreeNode root){
 		if(root!=null){
 			System.out.print(root.key+"-->");
 			Preorder(root.left);
@@ -16,7 +16,7 @@ public class Binary_tree{
 		}
 	}
 
-	public void Postorder(Node root){
+	public void Postorder(TreeNode root){
 		if(root!=null){
 			Postorder(root.left);
 			Postorder(root.right);
@@ -26,23 +26,15 @@ public class Binary_tree{
 	
 	public static void main(String[] args){
 		Binary_tree tree=new Binary_tree();
-		tree.root=new Node(1);
-		tree.root.left=new Node(2);
-		tree.root.right=new Node(3);
-		tree.root.left.left=new Node(4);
-		tree.root.left.right=new Node(5);
-		tree.root.left.right.left=new Node(6);
-		tree.root.left.right.right=new Node(7);
-		tree.root.left.right.right.left=new Node(8);
+		tree.root=new TreeNode(1);
+		tree.root.left=new TreeNode(2);
+		tree.root.right=new TreeNode(3);
+		tree.root.left.left=new TreeNode(4);
+		tree.root.left.right=new TreeNode(5);
+		tree.root.left.right.left=new TreeNode(6);
+		tree.root.left.right.right=new TreeNode(7);
+		tree.root.left.right.right.left=new TreeNode(8);
 		tree.Preorder(tree.root);
 	}
 }
 
-class Node{
-	Node left, right;
-	int key;
-	Node(int key){
-		this.key=key;
-		left=right=null;
-	}
-}
