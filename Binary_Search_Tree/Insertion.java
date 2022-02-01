@@ -1,23 +1,19 @@
 import java.util.*;
 public class Insertion{
-	static Node root;
-	static void insert(int value){
-		insertNode(root,value);
-	}
-	static Node insertNode(Node root, int value){
+	TreeNode insert(TreeNode root, int value){
 		if(root==null){
-			root=new Node(value);
+			root=new TreeNode(value);
 			return root;
 		}
 		if(root.value>value){
-			root.left=insertNode(root.left,value);
+			root.left=insert(root.left,value);
 		}
 		else if(root.value<value){
-			root.right=insertNode(root.right,value);			
+			root.right=insert(root.right,value);			
 		}
 		return root;
 	}
-	static void treeTraversal(Node root){
+	static void treeTraversal(TreeNode root){
 		if(root!=null){
 			treeTraversal(root.left);
 			System.out.print(root.value+" -> ");
@@ -25,18 +21,14 @@ public class Insertion{
 		}
 	}
 	public static void main(String[] args){
-		root=new Node(10);
-		insert(11);insert(56);insert(44);insert(12);insert(45);insert(32);insert(41);insert(23);
-		insert(9);insert(51);insert(35);insert(21);insert(78);insert(81);insert(75);insert(33);
+		TreeNode root=new TreeNode(10);
+		Insertion obj=new Insertion();
+		Scanner in=new Scanner(System.in);
+		int k;
+		for(int i=0;i<6;i++){
+			k=in.nextInt();
+			obj.insert(root,k);
+		}
 		treeTraversal(root);
-	}
-}
-class Node{
-	int value;
-	Node left,right;
-	Node(int value){
-		this.value=value;
-		left=null;
-		right=null;
 	}
 }
