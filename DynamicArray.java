@@ -55,6 +55,10 @@ public class DynamicArray{
         }
     }
 
+    public void clear(){
+        list=null;
+    }
+
     public void traverse(){
         for(int i=0; i<currentSize; i++){
             System.out.println(list[i]+"  ");
